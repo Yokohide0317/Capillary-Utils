@@ -59,12 +59,18 @@ def plot_fastq_qualities(df, ax=None, cut_left_num=0, cut_right_num=0):
 ###############################
 st.markdown("# 1. Import")
 
-uploaded_file = st.file_uploader("Choose a abi file")
+uploaded_file = st.file_uploader("Choose a abi or fastq file")
 
 if uploaded_file is not None:
 
     filename = uploaded_file.name
-    seq = ab1_to_seq(uploaded_file)
+    if filename.endswith(".ab1"):
+        seq = ab1_to_seq(uploaded_file)
+    elif filename.endswith(".fastq"):
+        seq = SeqIO.read(uploaded_file, "fastq")
+    else:
+        st.markdown("Please upload .ab1 or .fastq file.")
+        st.stop()
 
     st.markdown("# 2. QC")
 
