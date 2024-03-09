@@ -56,6 +56,7 @@ class Ab1ToFast:
 
         return True
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Utils for capillary sequencing")
     subparsers = parser.add_subparsers(dest="subcommand")
@@ -72,5 +73,5 @@ if __name__ == "__main__":
         case "convert":
             ab1ToFast = Ab1ToFast(file=args.file, file_dir=args.dir)
             ab1ToFast.run(output_dir=args.output_dir, to=args.to)
-        case "bar":
-            pass
+        case _:
+            parser.print_help()
