@@ -47,6 +47,6 @@ python capillary_cli.py all -f <path_to_abi>.ab1 -o <output_dir>
 !git clone https://github.com/Yokohide0317/Capillary-Utils.git
 !pip3 install -r Capillary-Utils/requirements.txt -q
 
-# Run cli
-!python3 Capillary-Utils/app/capillary_cli.py convert -f /content/<sample_name>.ab1 -o output --to fasta
+# Specify the file, and run. Export fasta, fastq and report
+!python3 Capillary-Utils/app/capillary_cli.py all -f /content/<sample_name>.ab1 -o output
 ```
