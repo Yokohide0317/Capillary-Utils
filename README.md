@@ -39,14 +39,12 @@ python capillary_cli.py all -f <path_to_abi>.ab1 -o <output_dir>
 
 ### Using cli in Google Colab
 
-1. Upload data under `/content`. You can use it for multiple files (Please put them into a directory).
-2. Run the code below.
+Run the code below.
 
 ```bash
-# Plase Upload data first.
 !git clone https://github.com/Yokohide0317/Capillary-Utils.git
-!pip3 install -r Capillary-Utils/requirements.txt -q
+!bash Capillary-Utils/setup4colab.sh
 
 # Specify the file, and run. Export fasta, fastq and report
-!python3 Capillary-Utils/app/capillary_cli.py all -f /content/<sample_name>.ab1 -o output
+!python3 Capillary-Utils/app/capillary_cli.py all -d /content/input -o output
 ```
