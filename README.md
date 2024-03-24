@@ -1,6 +1,9 @@
 # Capillary-Utils
 
-[Capillary_Utils_on_Colab.ipynb](Capillary_Utils_on_Colab.ipynb)
+## Quick Start
+[Capillary_Utils_on_Colab.ipynb](https://colab.research.google.com/github/Yokohide0317/Capillary-Utils/blob/main/Capillary_Utils_on_Colab.ipynb)
+
+---
 
 ## Build
 
