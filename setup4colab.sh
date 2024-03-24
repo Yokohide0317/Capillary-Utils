@@ -7,6 +7,6 @@ if [ ! -d $INPUT ]; then
     mkdir $INPUT
 fi
 
-echo "左のファイルタブを開き、「input」の中に`.ab1`ファイルを入れてください。"
+echo "左のファイルタブを開き、「input」の中に.ab1ファイルを入れてください。"
 echo "※複数ファイルもOKです。"
 echo "入れたら、次のセルを実行します。"
